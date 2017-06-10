@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <script src="popup.js"></script>
+    <script src="firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="mpages.css">
+    </head>
+  <body>
+    <div id="addnew">
+      <div class="title"><a class="backHome" href="popup.html"><</a>Add a micro page</div>
+      <div class="content">
+        <p></p>
+        <form name="addpage">
+          <p>Page name</p>
+          <input name="pagename" type="text" placeholder="eg. Twitter" required>
+          <p>Page address</p>
+          <input name="pageurl" type="text" placeholder="eg. twitter.com" required>
+
+        </form>
+      </div>
+      <a id="add_page" class="button">Add this</a>
+      <div id="error" class="error">
+        Are you sure you filled out all the forms?
+      </div>
+    </div>
+
+
+    <div id="success" class="hidden">
+      <div class="title">Success</div>
+      <div class="content">
+        <p class="bigText center">We created the micro page<br><span id="pagename"></span>for you.</p>
+      </div>
+      <a id="back" class="button" href="popup.html">Okay, cool!</a>
+    </div>
+
+  </body>
+  <script src="addNew.js"></script>
+</html>

@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Overpass, sans-serif;
+  display: block;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 600px;
+  width: 400px;
+}
+@keyframes backHome_zoom {
+  from {
+    font-size: 0px;
+    margin: 0;
+  }
+  to {
+    font-size: ;
+    margin-right: 10px;
+  }
+}
+.backHome {
+  animation-name: backHome_zoom;
+  animation-duration: 0.5s;
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  cursor: default;
+  transition: 0.25s;
+  text-align: center;
+  font-size: 24px;
+}
+
+.backHome:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.button {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 2px;
+  background: darkgray;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.25s;
+  cursor: default;
+}
+
+.button:hover {
+  border-color: darkgray;
+  background: rgb(200, 200, 200);
+  box-shadow: 0 2px 4px 1px darkgray;
+}
+
+.button:active {
+  background: rgb(125,125,125);
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+@keyframes title_appear {
+  from {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.title {
+  overflow: hidden;
+  text-transform: uppercase;
+  background: indigo;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 15px;
+  animation-name: title_appear;
+  animation-duration: .5s;
+  vertical-align: middle;
+}
+
+@keyframes content_appear {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.content {
+  overflow: hidden;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+  animation-name: content_appear;
+  animation-duration: .75s;
+  white-space: nowrap;
+  display: block;
+  box-sizing: border-box;
+}
+
+.fullWidth {
+  width: 100%;
+  margin: 15px;
+  margin-right: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  padding: 2px;
+  margin: 2px;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+@keyframes error-appear {
+  from {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  to {
+    padding: ;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  background: crimson;
+  margin-top: 10px;
+  padding: 10px;
+  animation-name: error-appear;
+  animation-duration: .5s;
+  display: none;
+  white-space: nowrap;
+}
+
+.bigText {
+  margin: 5px;
+  padding: 5px;
+  text-overflow: ellipsis;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.microsite {
+  margin: 5px;
+}
+
+.microsite-main {
+  border: 2px solid lightgray;
+  background: snow;
+  padding: 2px;
+  position: static;
+  transition: .5s;
+}
+
+.microsite-main:hover {
+  background: lightgray;
+  border-color: darkgray;
+  border-radius: 2px;
+}
+
+
+.microsite.name {
+  font-size: 20px;
+  color: black;
+}
+
+.microsite.url {
+  font-size: 17px;
+  color: gray;
+}

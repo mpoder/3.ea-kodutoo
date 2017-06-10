@@ -1,0 +1,21 @@
+	{
+		"manifest_version": 2,
+		"name": "Micro Pages",
+		"description": "easy note making extension",
+		"version": "1.0",
+		"permissions": [
+			"activeTab",
+			"tabs",
+			"http://*/*",
+			"https://*/*"
+		],
+		"content_scripts" : [{
+			"matches" : [ "*://*/*", "http://*/*", "https://*/*"],
+			"js" : ["popup.js", "addNew.js"]
+		}],
+		"browser_action": {
+			"default_title": "Micro Pages",
+			"default_popup": "popup.html"
+		},
+		"content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+	}
