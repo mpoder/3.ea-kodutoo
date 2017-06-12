@@ -4,17 +4,30 @@ class microSite {
     this.url = url;
   }
 }
-
 var microSites = [];
-var element = new microSite("Facebook", "facebook.com");
-microSites.push(element);
+
+if (localStorage.getItem("microSites")) {
+  var microSites = JSON.parse(localStorage.getItem("microSites"));
+} else {
+  var microSites = [];
+}
 
 var button_addnew = document.getElementById('add_new');
 if (button_addnew) {
 button_addnew.addEventListener(click, createPage());
 }
+
+function createSite(pageTitle, pageURL) {
+  newSite = new microSite(pageTitle, pageURL);
+  microSites.push(newSite);
+  localStorage.setItem("microSites", JSON.stringify(microSites));
+}
+
+function refreshSites() {
+  localStorage.setItem("microSites", JSON.stringify(microSites));
+}
+
 function createPage() {
-  alert("Oh noes!");
 }
 
 
@@ -23,14 +36,3 @@ firebase.auth().signInWithEmailAndPassword("mpoder@tlu.ee", "MihkelMihkel").catc
   var errorCode = error.code;
   var errorMessage = error.message;
 });
-
-
-
-
-
-firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}).catch(function(error) {
-  // An error happened.
-});
-// Get a reference to the database service
